@@ -1,0 +1,4 @@
+# Archivo de ejemplo. Para usarlo:
+# 1. Cópialo en esta misma carpeta con el nombre: application-local.properties
+# 2. Reemplaza TU_CLAVE_AQUI por la contraseña de tu usuario de MySQL.
+spring.datasource.password=TU_CLAVE_AQUI
