@@ -1,0 +1,165 @@
+/* Estilos del módulo de productos - diseño minimalista */
+
+/* Colores reutilizables */
+:root {
+    --ambar: #c8841a;
+    --ambar-oscuro: #a56a10;
+    --texto: #2b2b2b;
+    --gris-claro: #f5f3ef;
+    --borde: #e3ded5;
+    --rojo: #b3382c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 16px;
+    background: var(--gris-claro);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Tarjeta blanca centrada que contiene cada pantalla */
+.contenedor {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    margin: 0 0 24px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ambar-oscuro);
+}
+
+/* Barra superior de la lista */
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barra h2 {
+    margin: 0;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #777;
+    border-bottom: 2px solid var(--borde);
+}
+
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--borde);
+}
+
+tr:hover td {
+    background: #fbf9f5;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Botones y enlaces con forma de botón */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--ambar);
+    border-radius: 6px;
+    background: var(--ambar);
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--ambar-oscuro);
+}
+
+.btn-suave {
+    background: transparent;
+    color: var(--ambar-oscuro);
+}
+
+.btn-suave:hover {
+    background: #fbf1df;
+}
+
+.btn-peligro {
+    background: transparent;
+    border-color: var(--rojo);
+    color: var(--rojo);
+}
+
+.btn-peligro:hover {
+    background: var(--rojo);
+    color: #ffffff;
+}
+
+/* Formulario */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--ambar);
+    box-shadow: 0 0 0 3px rgba(200, 132, 26, 0.15);
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+/* Mensajes de validación */
+.error {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--rojo);
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
