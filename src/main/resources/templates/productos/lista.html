@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventario de Cervezas</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="barra">
+            <h2>Inventario de Cervezas</h2>
+            <a href="/productos/nuevo" class="btn">+ Nueva cerveza</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Se repite una fila por cada producto de la base de datos -->
+                <tr th:each="p : ${productos}">
+                    <td th:text="${p.idProducto}"></td>
+                    <td th:text="${p.nombre}"></td>
+                    <td th:text="${p.precio}"></td>
+                    <td th:text="${p.stock}"></td>
+                    <td class="acciones">
+                        <a th:href="@{/productos/editar/{id}(id=${p.idProducto})}"
+                           class="btn btn-suave">Editar</a>
+                        <form th:action="@{/productos/eliminar/{id}(id=${p.idProducto})}"
+                              method="post">
+                            <button type="submit" class="btn btn-peligro">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
